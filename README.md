@@ -4,5 +4,7 @@ Solutions to <a href="https://www.adventofcode.com/2022" target="_blank">Advent 
 
 # Status
 Day 1. --> ⭐⭐
+
 Day 2. --> ⭐⭐
+
 Day 3. --> ⭐⭐
