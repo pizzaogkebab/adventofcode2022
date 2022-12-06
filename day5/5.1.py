@@ -1,31 +1,27 @@
-from collections import defaultdict
-with open('5.txt', 'r') as input_str:
-    graph, instrs = input_str.read().split('\n\n')
+def top_of_stacks(init_stacks: str, steps: str) -> str:
+    last_line = init_stacks.splitlines()[-1]
+    stacks = [[] for _ in range((len(last_line) + 2) // 4)]
+    for line in init_stacks.splitlines():
 
-
-def dict_create(records: str) -> dict:
-    d = defaultdict(list)
-    for line in records.splitlines()[0:8]:
-        for x in range(1,len(line),4):
-            if line[x] == ' ':
+        for element in range(1,len(line),4):
+            if line[element] == ' ':
                 continue
             else:
-                d[int(records.splitlines()[8][x])].append(line[x])
-    for ind, x in enumerate(d,start=1):
-        d[ind].reverse()
-    return d
+                stacks[int(last_line[element]) - 1].insert(0, line[element])
 
-def word_formation(records, ddict):
-    for records in records.splitlines():
-        q, a, b = int(records.split(' ')[1]), int(records.split(' ')[3]), int(records.split(' ')[5])
+    for step in steps.splitlines():
+        q, a, b = int(step.split(' ')[1]), int(step.split(' ')[3]), int(step.split(' ')[5])
         for x in range(q):
-            elem = ddict[a].pop()
-            ddict[b].append(elem)
+            stacks[b - 1].append(stacks[a - 1].pop())
+
     s = ""
-    for x in range(1,10):
-        if len(ddict[x]) >0:
-            element = ddict[x].pop()
-            s += element
+    for stack in stacks:
+        s += stack.pop()
+
     return s
 
-print(word_formation(instrs , dict_create(graph)))
+
+with open('5.txt', 'r') as input_str:
+    stacks, instructions= input_str.read().split('\n\n')
+
+print(top_of_stacks(stacks, instructions))
