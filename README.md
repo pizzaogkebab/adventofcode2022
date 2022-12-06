@@ -3,7 +3,8 @@
 Solutions to <a href="https://www.adventofcode.com/2022" target="_blank">Advent of code</a> problems implemented in python.
 
 # Status
-Day 1. --> ⭐⭐
+<pre>
+Day 1. --> ⭐⭐   Day 6. --> ⭐⭐    
 
 Day 2. --> ⭐⭐
 
@@ -11,4 +12,5 @@ Day 3. --> ⭐⭐
 
 Day 4. --> ⭐⭐
 
-Day 5. --> ⭐
+Day 5. --> ⭐⭐
+</pre>
