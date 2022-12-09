@@ -89,3 +89,14 @@ Solutions to <a href="https://www.adventofcode.com/2022" target="_blank">Advent 
 [Part 2](/day8/8.2.py): *0.0179309s* --> ⭐
 
 >Answer: 315495
+
+
+### [Day 9](https://www.adventofcode.com/2022/day/9):
+
+[Part 1](/day9/9.1.py): *0.0086110s*  --> ⭐
+
+>Answer: 6030
+
+[Part 2](/day9/9.2.py): *0.0525796s* --> ⭐
+
+>Answer: 2545
