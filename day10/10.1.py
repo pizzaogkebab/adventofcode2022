@@ -1,4 +1,4 @@
-def compute(records: str):
+def sum_in_cycles(records: str) -> int:
     cycle = 0
     x = 1
     sum_of_xs = 0
@@ -18,4 +18,4 @@ def compute(records: str):
 with open('10.txt', 'r') as input_str:
     data = input_str.read()
 
-print(compute(data))
+print(sum_in_cycles(data))
