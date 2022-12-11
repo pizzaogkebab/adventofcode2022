@@ -19,10 +19,6 @@ class Monkey:
         self.items_count = items_count
 
 
-with open("11.txt", 'r') as input_str:
-    data = input_str.read()
-
-
 def monkeys_init(records):
     monkeys = []
     for part in records.split('\n\n'):
@@ -45,7 +41,7 @@ def monkeys_init(records):
     return monkeys
 
 
-def compute(ile, monkeys):
+def count(ile, monkeys):
     for round in range(ile):
         for monkey in monkeys:
             while monkey.items:
@@ -58,6 +54,10 @@ def compute(ile, monkeys):
                     monkeys[monkey.if_false].items.append(worry_level)
     monkey_business = [x.items_count for x in monkeys]
     monkey_business.sort(reverse= True)
-    print(monkey_business[0] * monkey_business[1])
+    return monkey_business[0] * monkey_business[1]
 
-print(f"part 1. solution: compute(20, monkeys_init(data))
+
+with open("11.txt", 'r') as input_str:
+    data = input_str.read()
+
+print(f"part 1. solution: {count(20, monkeys_init(data))}")
