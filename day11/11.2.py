@@ -54,7 +54,6 @@ def count(ile, monkeys):
                 monkey.items_count += 1
                 worry_level = monkey.operation(worry_level, monkey.value)
                 worry_level = worry_level % prod
-                print(worry_level)
                 if worry_level % monkey.cond == 0:
                     monkeys[monkey.if_true].items.append(worry_level)
                 else:
@@ -62,7 +61,7 @@ def count(ile, monkeys):
 
     monkey_business = [x.items_count for x in monkeys]
     monkey_business.sort(reverse=True)
-    return(monkey_business[0] * monkey_business[1])
+    return monkey_business[0] * monkey_business[1]
 
 
 with open('11.txt' , 'r') as input_str:
