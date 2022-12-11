@@ -111,3 +111,14 @@ Solutions to <a href="https://www.adventofcode.com/2022" target="_blank">Advent 
 [Part 2](/day10/10.2.py): *0.0002589s* --> ⭐
 
 >Answer: ZGCJZJFL
+
+
+### [Day 11](https://www.adventofcode.com/2022/day/10):
+
+[Part 1](/day10/10.1.py): *0.0007327s*  --> ⭐
+
+>Answer: 58794
+
+[Part 2](/day10/10.2.py): *0.4654137s* --> ⭐
+
+>Answer: 20151213744
